@@ -1,4 +1,4 @@
-#region LICENSE
+﻿#region LICENSE
 
 /*
  Copyright 2014 - 2015 LeagueSharp
@@ -439,43 +439,43 @@ namespace HoolaRiven
                 /* Drawings submenu */
                 var drawings = new Menu("Drawings", "drawings");
                 drawings.AddItem(
-                    new MenuItem("AACircle", "AACircle").SetShared()
+                    new MenuItem("AACircle", "Tầm đánh").SetShared()
                         .SetValue(new Circle(true, Color.FromArgb(155, 255, 255, 0))));
                 drawings.AddItem(
-                    new MenuItem("AACircle2", "Enemy AA circle").SetShared()
+                    new MenuItem("AACircle2", "Tầm đánh đối phương").SetShared()
                         .SetValue(new Circle(false, Color.FromArgb(155, 255, 255, 0))));
                 drawings.AddItem(
-                    new MenuItem("HoldZone", "HoldZone").SetShared()
+                    new MenuItem("HoldZone", "Giữ vị trí").SetShared()
                         .SetValue(new Circle(false, Color.FromArgb(155, 255, 255, 0))));
                 drawings.AddItem(
-                    new MenuItem("AALineWidth", "Line Width")).SetShared()
+                    new MenuItem("AALineWidth", "Chiều rộng đường kẻ")).SetShared()
                     .SetValue(new Slider(2, 1, 6));
                 _config.AddSubMenu(drawings);
 
                 /* Misc options */
                 var misc = new Menu("Misc", "Misc");
                 misc.AddItem(
-                    new MenuItem("HoldPosRadius", "Hold Position Radius").SetValue(new Slider(65, 0, 250)));
-                misc.AddItem(new MenuItem("PriorizeFarm", "Priorize farm over harass").SetValue(true));
-                misc.AddItem(new MenuItem("AttackWards", "Auto attack wards").SetShared().SetValue(false));
-                misc.AddItem(new MenuItem("AttackPetsnTraps", "Auto attack pets & traps").SetShared().SetValue(true));
-                misc.AddItem(new MenuItem("Smallminionsprio", "Jungle clear small first").SetShared().SetValue(false));
+                    new MenuItem("HoldPosRadius", "Giữ vị trí an toàn").SetValue(new Slider(65, 0, 250)));
+                misc.AddItem(new MenuItem("PriorizeFarm", "ưu tiên farm trong harass").SetValue(true));
+                misc.AddItem(new MenuItem("AttackWards", "Tự đánh mắt").SetShared().SetValue(false));
+                misc.AddItem(new MenuItem("AttackPetsnTraps", "Tự đánh pet & bẫy").SetShared().SetValue(true));
+                misc.AddItem(new MenuItem("Smallminionsprio", "đánh quái nhỏ trước khi JungleClean").SetShared().SetValue(false));
                 _config.AddSubMenu(misc);
                 
                 _config.AddItem(
-                    new MenuItem("ExtraMoveup", "Move delay After AA").SetValue(new Slider(50, 0, 100)));
+                    new MenuItem("ExtraMoveup", "độ trễ di chuyển sau đòn đánh thường").SetValue(new Slider(50, 0, 100)));
 
 
                 /*Load the menu*/
                 _config.AddItem(
-                    new MenuItem("Flee", "Flee").SetValue(new KeyBind('A', KeyBindType.Press)));
+                    new MenuItem("Flee", "Chạy trốn").SetValue(new KeyBind('A', KeyBindType.Press)));
 
                 _config.AddItem(
                     new MenuItem("LastHit", "Last hit").SetValue(new KeyBind('X', KeyBindType.Press)));
 
                 _config.AddItem(new MenuItem("Harass", "Harass").SetValue(new KeyBind('C', KeyBindType.Press)));
 
-                _config.AddItem(new MenuItem("Harass.MLH", "Lasthit While Harass").SetValue(true));
+                _config.AddItem(new MenuItem("Harass.MLH", "Lasthit khi Harass").SetValue(true));
 
                 _config.AddItem(
                     new MenuItem("LaneClear", "LaneClear").SetValue(new KeyBind('V', KeyBindType.Press)));
